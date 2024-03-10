@@ -8,6 +8,6 @@ fn main() {
 
     let dll: PathBuf = args.next().unwrap().into();
 
-    let process = Process::by_name("DarkSoulsIII.exe").expect("Could not find process");
+    let process = Process::by_name("DarkSoulsIII.ex").expect("Could not find process");
     process.inject(dll).expect("Could not inject DLL");
 }

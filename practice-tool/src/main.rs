@@ -57,7 +57,7 @@ fn perform_injection() -> Result<(), String> {
     let dll_path = dll_path.canonicalize().map_err(err_to_string)?;
     trace!("Injecting {:?}", dll_path);
 
-    Process::by_name("DarkSoulsIII.exe")
+    Process::by_name("DarkSoulsIII.ex")
         .map_err(|e| format!("Could not find process: {e:?}"))?
         .inject(dll_path)
         .map_err(|e| format!("Could not inject DLL: {e:?}"))?;

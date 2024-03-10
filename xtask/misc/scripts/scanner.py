@@ -190,11 +190,11 @@ def write_chain(h_proc, offsets, value):
 
 
 if __name__ == '__main__':
-    proc = find_process('DarkSoulsIII.exe')
+    proc = find_process('DarkSoulsIII.ex')
     h_proc = OpenProcess(PROCESS_ALL_ACCESS, False, proc['pid'])
     mods = EnumProcessModules(h_proc)
 
-    
+
     def calc(base_b, base_d, base_f, debug, grend, xa):
         boffs = readb(h_proc, base_b + 3, c_uint32).value
         val = base_b + 7 + boffs
@@ -221,5 +221,5 @@ if __name__ == '__main__':
     # 1.12
     # calc(0x1404C191A,0x1404C7120, 0x1404CA5ED, 0x1408D7C88, 0x14062C45B, 0x140841875)
     # 1.15
-    calc(0x1404C1A3A, 0x1404C7240,0x1404CA70D, 0x1408D9748, 0x14062C58B,0x140841D05)  
+    calc(0x1404C1A3A, 0x1404C7240,0x1404CA70D, 0x1408D9748, 0x14062C58B,0x140841D05)
 

@@ -15,7 +15,7 @@ fn patches_paths() -> impl Iterator<Item = PathBuf> {
         .read_dir()
         .expect("Couldn't scan patches directory")
         .map(Result::unwrap)
-        .map(|dir| dir.path().join("Game").join("DarkSoulsIII.exe"))
+        .map(|dir| dir.path().join("Game").join("DarkSoulsIII.ex"))
 }
 
 fn base_addresses_rs_path() -> PathBuf {
